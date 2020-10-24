@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>XCO-19 | Elco_Siliwangi Team</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<meta name="author" content="Elco Siliwangi Team" />
+	<meta name="description" content="Laman pengenalan XCO-19" />
+	<meta name="keywords"  content="xco-19,unsil,eclo,elco siliwangi team,covid19" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="dist/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="dist/examples.css" />
+	<style>
+
+
+	body{
+		color: #333;
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	}
+
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		margin:0;
+		padding:0;
+	}
+	h2{
+		font-size: 2em;
+		margin: 0 0 18px 0;
+		font-family: arial,helvetica;
+	}
+
+
+
+
+	/* Common styles
+	* --------------------------------------- */
+	img{
+	    -webkit-transition: all 0.7s ease-out;
+		-moz-transition: all 0.7s ease-out;
+		-o-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+	}
+	.section{
+		text-align:center;
+		overflow:hidden;
+	}
+	.wrap{
+		width: 1180px;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+	.box{
+		text-align: left;
+		color: #808080;
+		font-size: 1.2em;
+		line-height: 1.6em;
+	}
+
+
+
+	/* CSS Tambahan
+	* --------------------------------------- */
+	#fp-nav ul li .fp-tooltip {
+		color: #000;
+	}
+	div#logo {
+		background: transparent;
+		top: 0;
+		right: 0;
+		position: absolute;
+		z-index: 1;
+		padding: 10px;
+	}
+	div#logo img {
+		width: 50px;
+	}
+
+
+	/* Section 0
+	* --------------------------------------- */
+	#section0{
+		padding: 60px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+	}
+	#section0 img{
+		height: 100%;
+        max-height: 250px;
+		margin: 40px 0 0 0;
+	}
+    #section0 h1 {
+        margin-top: 40px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #section0 p {
+        margin: 0;
+        text-align: center;
+        font-size: 14px;
+        font-style: italic;
+        font-weight: lighter;
+    }
+
+
+
+
+	/* Section 1
+	* --------------------------------------- */
+	#section1 img{
+		position:absolute;
+		left: 40px;
+		top: 100px;
+        max-height: 400px;
+	}
+
+	#section1 .box{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -192px;
+		margin-left: 89px;
+		width: 395px;
+		z-index: 1;
+        font-size: 16px;
+        line-height: 25px;
+	}
+    #section1 .box h2 {
+        line-height: 40px;
+        margin-top: 10px;
+    }
+    #section1 .box h2 span {
+        background-color: #5b9bd5;
+    } 
+	#section1 .imgsContainer{
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 42%;
+		left: 58%;
+		margin-top: -325px;
+		margin-left: -747px;
+		width: 800px;
+		height: 696px;
+	}
+	#section1 img{
+		height: 100%;
+	}
+	/*screen resolutions between 620px and 800px*/
+	@media all and (min-width: 620px) and (max-width: 800px){
+		#section1 .imgsContainer{
+			margin-top: -278px;
+			margin-left: -685px;
+			width: 647px;
+			height: 563px;
+		}
+	}
+
+	/*screen resolutions lower than 620px*/
+	@media all and (max-width: 620px){
+		#section1 .imgsContainer{
+			margin-top: -208px;
+			margin-left: -516px;
+			width: 534px;
+			height: 464px;
+		}
+	}
+	#iphone2{
+		z-index: 10;
+	}
+	#iphone2.active{
+		-webkit-transform: translate3d(50px, 15%, 0px);
+		-moz-transform: translate3d(50px, 15%, 0px);
+		-ms-transform:translate3d(50px, 15%, 0px);
+		transform: translate3d(50px, 15%, 0px)
+	}
+
+	#iphone3{
+		z-index: 12;
+	}
+	#iphone3.active{
+		-webkit-transform: translate3d(213px, 0px, 0px);
+		-moz-transform: translate3d(213px, 0px, 0px);
+		-ms-transform:translate3d(213px, 0px, 0px);
+		transform: translate3d(213px, 0px, 0px);
+	}
+
+	#iphone4{
+		z-index: 11;
+		left: 140px;
+	}
+
+	#iphone4.active{
+		-webkit-transform: translate3d(548px, 0px, 0px);
+		-moz-transform: translate3d(548px, 0px, 0px);
+		-ms-transform:translate3d(548px, 0px, 0px);
+		transform: translate3d(548px, 0px, 0px);
+	}
+
+
+
+
+	/* Section 2
+	* --------------------------------------- */
+	#section2 img {
+		width: 210px;
+		position: absolute;
+		float: left;
+		border-radius: 1rem;
+		box-shadow: -2px 2px 5px 0px #47474780;
+	}
+	#section2 .imgsContainer,
+	#staticImg .imgsContainer,
+	#section3 .imgsContainer,
+	#section4 .imgsContainer,
+	#section5 .imgsContainer{
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		display: block;
+		margin-top: -288px;
+		margin-left: -636px;
+		width: 0;
+		height: 0;
+
+		-webkit-transition: all 1.2s ease-in-out;
+		-moz-transition: all 1.2s ease-in-out;
+		-o-transition: all 1.2s ease-in-out;
+		transition: all 1.2s ease-in-out;
+	}
+
+	#section2.moveUp .imgsContainer{
+		top: 50%;
+	}
+
+	#section2.moveDown .imgsContainer,
+	#staticImg .imgsContainer{
+		top: 90%;
+	}
+
+	#section2.active .imgsContainer{
+		top: 50%;
+	}
+
+	#section2 .box{
+		top: 22%;
+		left: 42%;
+		position: absolute;
+		width: 582px;
+	}
+
+	#iphone-yellow {
+		top: 100px;
+		left: 0;
+		box-shadow: 2px 2px 5px 0px #47474780!important;
+	}
+
+	#iphone-red {
+		top: 320px;
+		left: 0;
+		box-shadow: 2px -2px 5px 0px #47474780!important;
+	}
+
+	#iphone-blue {
+		top: 320px;
+		left: 250px;
+		width: 220px!important;
+		box-shadow: -2px -2px 5px 0px #47474780!important;
+	}
+
+	img#berita4 {
+		top: 100px;
+		left: 250px;
+		width: 220px;
+		box-shadow: -2px 2px 5px 0px #47474780;
+	}
+
+	#iphone-green{
+		left: 106px;
+		position:absolute;
+	}
+
+	#staticImg{
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 200%;
+		left: 0;
+		width: 100%;
+		min-width: 980px;
+		height: 100%;
+
+		-webkit-transition: all 0.7s ease-out;
+		-moz-transition: all 0.7s ease-out;
+		-o-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+
+		-webkit-backface-visibility: hidden;
+ 		-webkit-perspective: 1000;
+	}
+	#staticImg.moveDown{
+	-webkit-transform: translate3d(0, 100%, 0);
+      -ms-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+	}
+	#staticImg.moveUp{
+
+	-webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+	}
+	#staticImg.moveDown .imgsContainer{
+			top: 50%;
+	}
+	#staticImg.moveDown img{
+		top: 155px;
+	}
+
+	#staticImg.active .imgsContainer{
+		top: 50%;
+	}
+
+
+	#staticImg.active img{
+		top: 487px;
+	}
+
+
+
+
+
+	/* Section 3
+	* --------------------------------------- */
+	#section3 .imgsContainer {
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#section3 img {
+		top: 250px;
+		position: absolute;
+		margin-left: -90px;
+	}
+	#section3 .box{
+		text-align: center;
+		margin: 10% 0 0 0;
+	}
+
+
+	/* Section 4
+	* --------------------------------------- */
+	#section4 .imgsContainer {
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#section4 img {
+		top: 250px;
+		position: absolute;
+		margin-left: -90px;
+	}
+	#section4 .box{
+		text-align: center;
+		margin: 10% 0 0 0;
+	}
+
+
+	/* Section 5
+	* --------------------------------------- */
+	#section5 .imgsContainer {
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#section5 img {
+		top: 250px;
+		margin-left: -90px;
+		width: 150px;
+		position: absolute;
+		border-radius: 1rem;
+	}
+	#section5 .box{
+		text-align: center;
+		margin: 10% 0 0 0;
+	}
+	#section5 .imgsContainer p {
+		position: absolute;
+		top: 500px;
+		font-size: 16px;
+		width: 150px;
+		margin-left: -90px;
+	}
+
+	img#founder1, #nama1 {
+		left: 210px;
+	}
+	img#founder2, #nama2 {
+		left: 200px;
+	}
+	img#founder3, #nama3 {
+		height: 209px;
+		left: 500px;
+	}
+	img#founder4, #nama4 {
+		left: 800px;
+	}
+	img#founder5, #nama5 {
+		left: 1090px;
+	}
+
+
+/* Section 6
+	* --------------------------------------- */
+	#section6 .imgsContainer {
+		top: 50%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#section6 img {
+		top: 250px;
+		position: absolute;
+		margin-left: -90px;
+	}
+	#section6 .box{
+		text-align: center;
+		margin: 10% 0 0 0;
+	}
+	#section6 .wrap a {
+		color: #000;
+		font-style: italic;
+		text-decoration: underline;
+	}
+	#section6 .wrap iframe {
+		width: 100%;
+		max-width: 770px;
+		max-height: 430px;
+		height: 100%;
+		margin-top: 10px;
+		border-radius: 1rem;
+	}
+
+
+
+
+	/* Menu
+	* --------------------------------------- */
+	#infoMenu.whiteLinks li:nth-child(1) a,
+	#infoMenu.whiteLinks li:nth-child(2) a,
+	#infoMenu.whiteLinks li:nth-child(3) a{
+		color: #fff;
+	}
+	#infoMenu{
+		font-family: arial, helvetica;
+	}
+
+
+	/* Overwriting fullPage.js tooltip color
+	* --------------------------------------- */
+	.fp-tooltip{
+		color: #AAA;
+	}
+	#fp-nav span, .fp-slidesNav span{
+		border-color: #AAA;
+	}
+	#fp-nav li .active span, .fp-slidesNav .active span{
+		background: #AAA;
+	}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="dist/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="dist/examples.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+            var typed = new Typed('#typed-sec', {
+                strings: ["#Mengurangi Tingkat Penyebaran COVID-19", "Sistem Monitor dan Kontrol Kualitas Kesehatan Masyarakat Terdampak COVID-19 Berbasis IOT"],
+                typeSpeed: 50,
+                loop: true
+            });
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				'css3': true,
+				'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
+				'navigation': true,
+				'navigationPosition': 'right',
+				'navigationTooltips': ['XCO-19', 'Latar Belakang', 'Permasalahan', 'Solusi', 'Produk', 'Demonstrasi Produk', 'Founder'],
+
+				afterLoad: function(anchorLink, index){
+					if(index == 2){
+						$('#iphone3, #iphone2, #iphone4').addClass('active');
+					}
+					$('#infoMenu').toggleClass('whiteLinks', index ==4);
+
+				},
+
+				onLeave: function(index, newIndex, direction){
+					if (index == 3 && direction == 'down'){
+						$('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+					}
+					else if(index == 3 && direction == 'up'){
+						$('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+					}
+
+					$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+					$('#staticImg').toggleClass('moveDown', newIndex == 4);
+ 					$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+				},
+
+				/*
+				Needed to maintain the fixed position of the element
+				due to problems using translate3d and fixed elements.
+				*/
+				afterRender: function(){
+					$('#infoMenu').appendTo('body');
+
+					$('#githubLink, .twitter-share-button').appendTo('body');
+				}
+
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+
+<div id="logo">
+	<img src="tim.png" alt="elco siliwangi team" style="width: 150px;"/>
+	<img src="elco.png" alt="elco universitas siliwangi" />
+	<img src="unsil.png" alt="universitas siliwangi" />
+</div>
+
+<div id="fullpage">
+
+	<div class="section " id="section0">
+        <img src="xco19.png" alt="xco-19 logo" />
+        <h1>XCO-19</h1>
+        <p><span id="typed-sec"></span></p>
+	</div>
+	<div class="section" id="section1">
+		<div class="wrap">
+			<div class="imgsContainer">
+				<img src="Untitled.png" alt="iphone" id="iphone2" />
+			</div>
+
+			<div class="box">
+                <h2>Latar Belakang</h2>
+				COVID-19 menyebar dengan sangat cepat, penyebaran Covid-19 di Indonesia setiap hari <strong>semakin meningkat</strong>.
+				Total masyarakat yang positif terinfeksi Covid-19 di Indonesia dikonfirmasi <strong>mencapai angka 174.796</strong>
+Total individu yang sembuh setelah terinfeksi Covid-19 adalah <strong>sebesar 125.959</strong>
+Total individu yang meninggal dunia akibat terinfeksi Covid-19 adalah <strong>sebesar 7.417</strong>
+				</br>Update terakhir: 31 Agustus 2020</br>(kawalcovid19.id)
+			</div>
+		</div>
+	</div>
+
+	<div class="section moveDown" id="section2">
+		<div class="wrap">
+			<div class="imgsContainer">
+				<img src="berita1.png" alt="iphone" id="iphone-yellow" />
+				<img src="berita2.png" alt="iphone" id="iphone-red" />
+				<img src="berita3.png" alt="iphone" id="iphone-blue" />
+				<img src="berita4.png" alt="iphone" id="berita4" />
+			</div>
+
+			<div class="box">
+				<h2>Permasalahan</h2>
+				<ul style="font-size: 16px; list-style: circle;">
+					<li>Tingkat Akurasi Rapid Test <strong>sangat rendah</strong> (Riono, 2020)</li>
+					<li>Hasil Swab Test/PCR Test <strong>memerlukan waktu yang lama</strong> dan <strong>biaya yang mahal</strong> (Kompas,2020)</li>
+					<li>Test Cepat Molekuler hanya cocok untuk <strong>tes penyakit tuberkolosis</strong> (Dono, 2020)</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="section moveDown" id="section3">
+		<div class="wrap">
+			<div class="box">
+				<h2>Solusi</h2>
+					Solusi yang ditawarkan adalah dengan mengembangkan sistem XCO-19, 
+					sebuah sistem monitor dan kontrol kualitas kesehatan yang meliputi: 
+					suhu tubuh, detak jantung, saturasi oksigen dan lokasi seseorang berbasis Internet of Things
+			</div>
+		</div>
+		<div class="imgsContainer">
+			<img src="graph.PNG" alt="iphone" id="iphone-two" />
+		</div>
+	</div>
+	<div class="section moveDown" id="section4">
+		<div class="wrap">
+			<div class="box">
+				<h2>Produk</h2>
+					Produk yang dihasilkan adalah Modul alat XCO-19 yang terintegrasi dengan Internet of Things, 
+					Aplikasi XCO-19 sampai membentuk sistem XCO-19 yang terkoneksi dengan 
+					platform Antares IoT dan API BIGBOX
+			</div>
+		</div>
+		<div class="imgsContainer">
+			<img src="graph2.PNG" alt="iphone" id="graph2" />
+		</div>
+	</div>
+	<div class="section moveDown" id="section6">
+		<div class="wrap">
+			<div class="box">
+				<h2>Demonstrasi Produk</h2>
+				<a href="https://youtu.be/H1ZLH3W9YZI">https://youtu.be/H1ZLH3W9YZI</a>
+			</div>
+			<iframe src="https://www.youtube.com/embed/H1ZLH3W9YZI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="section moveDown" id="section5">
+		<div class="wrap">
+			<div class="box">
+				<h2>Founder</h2>
+					Elco_Siliwangi Team
+			</div>
+		</div>
+		<div class="imgsContainer">
+			<img src="founder1.png" alt="founder1" id="founder2" />
+			<img src="founder3.png" alt="founder3" id="founder3" />
+			<img src="founder4.png" alt="founder4" id="founder4" />
+			<img src="founder5.png" alt="founder5" id="founder5" />
+			<p id="nama2">Stheven Erlangga Sanjaya</p>
+			<p id="nama3">Miftahul Huda Pratama</p>
+			<p id="nama4">Rifki Akmal Aladduin</p>
+			<p id="nama5">Muhammad Rifky Zulfikar</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

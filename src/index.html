@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XCO-19 #Mengurangi Tingkat Penyebaran COVID-19</title>
+    <link href="sulphur.css" rel="stylesheet">
+    <link href="roboto.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        li:hover, button:hover {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        #header-wrap {
+            position: relative;
+            min-height: 112vh;
+            display: block;
+            overflow: hidden;
+            padding-bottom: 100px;
+            background: #1D9EFC;
+        }
+        #nav-wrap {
+            color: #FFF;
+            padding: 20px 40px;
+        }
+        #brand-wrap {
+            line-height: 48px;
+            /* identical to box height */
+
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+        #brand-wrap h1 {
+            font-family: Sulphur Point;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            margin: 15px 0;
+        }
+        #nav-list ul {
+            list-style: none;
+        }
+        #nav-list ul li {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        #nav-list ul li a {
+            font-family: Sulphur Point;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 26px;
+            text-decoration: none;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+        }
+        li#list-special2, button#hero-btn1 {
+            background-color: #FFC10E;
+            border-radius: 10px;
+            border: none;
+        }
+        #nav-list ul li#list-special1 a, button#hero-btn2 a, #nav-list ul li#list-special2 a, button#hero-btn1 a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #000000;
+        }
+        #nav-list ul li#list-special1 a, #nav-list ul li#list-special2 a {
+            font-weight: bold;
+        }
+        li#list-special1, button#hero-btn2 {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            border: none;
+        }
+        #nav-list ul li#list-special1 a, button#hero-btn2 a {
+            text-decoration: none;
+            color:  #000000;
+        }
+        #hero-wrap {
+            clear: both;
+            padding: 40px 40px 10px 40px;
+            position: relative;
+        }
+        div#hero-detail {
+            display: inline-block;
+            z-index: 111;
+            position: relative;
+            width: 50%;
+            padding-right: 10px;
+        }
+        #hero-detail h2 {
+    color: #FFC10E;
+    font-size: 50px;
+    font-family: Sulphur Point;
+    font-weight: bolder;
+    margin: 0;
+}
+div#hero-detail p {
+    font-size: 18px;
+    color: #FFFFFF;
+    max-width: 700px;
+    line-height: 21px;
+    font-weight: lighter;
+}   
+div#hero-btn-wrap {
+    padding-top: 30px;
+}
+div#hero-btn-wrap button {
+    padding: 15px 20px;
+    margin: 0 5px;
+}
+div#hero-video {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    border-radius: 20px;
+    z-index: 0;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+}
+iframe#ytvid {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 350px;
+    border-radius: 10px;
+}
+div#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000082;
+}
+div#overlay:hover {
+    display: none;
+}
+.strip {
+    width: 15%;
+    height: 3px;
+    border-radius: 1rem;
+    margin-top: -10px;
+    text-align: center;
+    margin: 20px auto 40px auto;
+}
+div#keunggulan-wrap .strip {
+    background: #FFFFFF;
+}
+div#keunggulan-wrap {
+    margin-top: -20px;
+    background-color: #FFC10E;
+    border-radius: 20px 20px 0 0;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+    padding: 0 40px 0 40px;
+    min-height: 120vh;
+}
+div#keunggulan-title {
+    padding-top: 10px;
+}
+div#keunggulan-title h3, div#produk-wrap-title h3 {
+    color: #1D9EFC;
+    font-size: 48px;
+    font-family: 'Sulphur Point';
+    font-weight: bold;
+    max-width: 90%;
+    margin-bottom: 10px;
+    margin-top: 0;
+}   
+div#keunggulan-title p {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+div#keunggulan-list {
+    padding-bottom: 20px;
+}
+div#keunggulan-list ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#keunggulan-list ul li {
+    display: flex;
+    float: left;
+    text-align: center;
+    max-width: 310px;
+    margin: 20px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+    border: 5px solid #1D9EFC;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+div#keunggulan-list ul li img {
+    max-width: 50px;
+    margin-bottom: 20px;
+}   
+div#keunggulan-list ul li div {
+    margin-left: 15px;
+    text-align: left;
+}
+div#keunggulan-list ul li h4 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+div#keunggulan-list ul li p {
+    font-size: 15px;
+}
+div#keunggulan-btn {
+    text-align: center;
+    padding-top: 20px;
+}
+div#keunggulan-btn button {
+    background: #ffc10e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding: 20px 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+div#keunggulan-btn button a {
+    color: #000000;
+    text-decoration: none;
+}
+div#produk-wrap {
+    margin-top: -30px;
+    z-index: 100;
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 0 40px 40px 40px;
+    overflow: hidden;
+}
+div#produk-wrap .strip {
+    background-color: #1D9EFC;
+}
+div#produk-wrap {
+    margin-top: -30px;
+    z-index: 100;
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 0 40px 40px 40px;
+    overflow: hidden;
+    min-height: 112vh;
+}
+div#produk-wrap .strip {
+    background-color: #1D9EFC;
+}
+div#keunggulan-title h3, div#produk-wrap-title h3 {
+    color: #1D9EFC;
+    font-size: 48px;
+    font-family: 'Sulphur Point';
+    font-weight: bold;
+    max-width: 90%;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+div#produk-list ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#produk-list ul li {
+    max-width: 320px;
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 20px;
+}
+div#produk-list ul li .produk-img {
+    width: 140px;
+    margin: 0;
+    height: 200px;
+    background: #EEEEEE;
+    border-radius: 20px;
+    overflow: hidden;
+}
+div#produk-list ul li img {
+    width: 100%;
+    height: 100%;
+}
+div#produk-list ul li .produk-detail h5 {
+    font-size: 24px;
+    font-family: 'Sulphur Point';
+    margin: 30px 0 0 0;
+}
+div#produk-list ul li .produk-detail p {
+    margin: 5px 0 20px 0;
+    font-size: 18px;
+}
+div#produk-list ul li .produk-detail button {
+    padding: 15px 20px;
+    border: none;
+    background: #1D9EFC;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+div#produk-list ul li .produk-detail button a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+}
+div#penutup-wrap {
+    min-height: 100vh;
+    margin-top: -40px;
+    background: #000000;
+    padding-top: 40px;
+    border-radius: 20px;
+}
+div#memulai-wrap {
+    padding: 30px;
+    background: #1D9EFC;
+    margin: 100px 40px 0 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div#memulai-wrap div#memulai-text h2 {
+    color: #FFF;
+    font-family: 'Sulphur Point';
+    font-size: 38px;
+    margin: 30px 0;
+}
+div#memulai-wrap div#memulai-btn button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Sulphur Point';
+    margin: 10px 0 10px 40px;
+    font-size: 18px;
+}
+button#memulai-btn1 {
+    background: #FFC10E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+div#memulai-wrap div#memulai-btn button a {
+    text-decoration: none;
+    font-weight: bold;
+}
+div#badge-brand {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div#badge-brand div#badge-brand-logo, div#badge-brand div#badge-tagline {
+    width: 50%;
+    text-align: center;
+}
+div#badge-brand div#badge-brand-logo img {
+    max-width: 200px;
+}
+div#badge-brand div#badge-tagline h2 {
+    font-size: 30px;
+    color: #FFF;
+    font-family: 'Sulphur Point';
+}
+footer#footer-wrap {
+    overflow: hidden;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 935px) {
+    
+}
+    </style>
+</head>
+<body>
+    <header id="header-wrap">
+        <nav id="nav-wrap">
+            <div id="brand-wrap" class="left">
+                <h1>XCO-19</h1>
+            </div>
+            <div id="nav-list" class="right">
+                <ul>
+                    <li><a href="#">Produk</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li id="list-special1"><a href="#">Memulai</a></li>
+                    <li id="list-special2"><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div style="clear:both;"></div>
+        </nav>
+        <div id="hero-wrap">
+            <div id="hero-detail" class="left">
+                <h2>Mengurangi Tingkat Penyebaran Covid-19</h2>
+                <p>Sebuah sistem monitor dan kontrol kualitas kesehatan yang meliputi: suhu tubuh, detak jantung, saturasi oksigen dan lokasi seseorang berbasis Internet of Things</p>
+                <div id="hero-btn-wrap">
+                    <button id="hero-btn1"><a href="#">Memulai</a></button>
+                    <button id="hero-btn2"><a href="#">Hubungi Kami</a></button>
+                </div>
+            </div>
+                <iframe id="ytvid" width="100%" height="100%" src="https://www.youtube.com/embed/H1ZLH3W9YZI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="clear:both;"></div>
+        </div>
+    </header>
+    <div id="keunggulan-wrap">
+        <div class="strip"></div>
+        <div id="keunggulan-title">
+            <h3>XCO-19 MEMBAWA IOT DALAM DUNIA KESEHATAN INDONESIA</h3>
+            <p>XCO-19 adalah sebuah sistem detektor kesehatan dengan kolaborasi teknologi internet of things. Parameter yang digunakan XCO-19 untuk melakukan pengecekan kondisi kesehatan, adalah: suhu tubuh, detak jantung, saturasi oksigen dan lokasi.</p>
+        </div>
+        <div id="keunggulan-list">
+            <ul>
+                <li>
+                    <img src="realtime-icon-23.jpg" alt="realtime icon"/>
+                    <div>
+                        <h4>Realtime</h4>
+                        <p>XCO-19 memungkinkan pengecekan kesehatan tubuh secara realtime</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="money-saving-icon-22.jpg" alt="murah icon"/>
+                    <div>
+                        <h4>Murah</h4>
+                        <p>Dengan harga 300rb-an modul XCO-19 ada dalam genggaman</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="access-icon-26.jpg" alt="mudah diakses icon"/>
+                    <div>
+                        <h4>Mudah Diakses</h4>
+                        <p>Dengan harga yang terjangkau serta cara penggunaan yang sederhana, membuat XCO-19 mudah diakses dan digunakan</p>
+                    </div>
+                </li>
+                
+            <div style="clear:both;"></div>
+            </ul>
+            <div id="keunggulan-btn">
+                <button><a href="#">Pelajari Selengkapnya</a></button>
+            </div>
+        </div>
+    </div>
+    <div id="produk-wrap">
+        <div class="strip"></div>
+        <div id="produk-wrap-title">
+            <h3>Produk Kami</h3>
+        </div>
+        <div id="produk-list">
+            <ul>
+                <li>
+                    <div class="produk-img">
+                        <img src="#" alt="produk12">
+                    </div>
+                    <div class="produk-detail">
+                        <h5>Modul XCO-19</h5>
+                        <p>Modul device xco-19 digunakan untuk memonitoring kondisi kesehatan yang meliputi suhu tubuh, detak jantung dan saturasi oksigen. Dan module device xco-19 telah terintegrasi dengan internet of things yang memudahkan dalam akses secara real time.</p>
+                        <button><a href="#">Beli Modul</a></button>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="produk-img">
+                        <img src="#" alt="produk12">
+                    </div>
+                    <div class="produk-detail">
+                        <h5>Aplikasi Android XCO-19</h5>
+                        <p>Aplikasi xco-19 digunakan untuk menampilkan data hasil pengukuran module device secara real-time dan untuk mendapatkan informasi terkini terkait penyebaran Covid-19.</p>
+                        <button><a href="#">Install Aplikasi Android</a></button>
+                    </div>
+                    
+            <div style="clear:both;"></div>
+                </li>
+                <div style="clear:both;"></div>
+            </ul>
+        </div>
+    </div>
+    <div id="penutup-wrap">
+        <div id="memulai-wrap">
+            <div id="memulai-text">
+                <h2>Siap untuk Memulai?</h2>
+            </div>
+            <div id="memulai-btn" class="right">
+                <button id="memulai-btn1"><a href="#">Ayo Memulai</a></button>
+                <button id="memulai-btn2"><a href="#">Hubungi Kami</a></button>
+            </div>
+        </div>
+        <div id="badge-brand">
+            <div id="badge-brand-logo" class="left">
+                <img src="xco19.png" alt="xco-19 logo" width="400px"/>
+            </div>
+            <div id="badge-tagline" class="right">
+                <h2>#Mengurangi Tingkat</br>Penyebaran Covid-19</h2>
+            </div>
+        </div>
+        
+        <div style="clear:both;"></div>
+    </div>
+    <footer id="footer-wrap">
+        <p>Copyright 2020.</p>
+    </footer>
+</body>
+</html>
